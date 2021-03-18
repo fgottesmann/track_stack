@@ -7,13 +7,13 @@ export type Props = {
   image: string;
 };
 
-function Trackcard(props: Props) {
+function Trackcard({ likebutton, title, artist, image }: Props) {
   return (
     <div className={styles.trackcard}>
-      <img className={styles.cardimage} src={props.image} />
-      <h3 className={styles.title}>{props.title}</h3>
-      <h4 className={styles.artist}>{props.artist}</h4>
-      <button className={styles.likebutton}>{props.likebutton}</button>
+      <img className={styles.cardimage} src={image} />
+      <h3 className={styles.title}>{title}</h3>
+      <h4 className={styles.artist}>{artist}</h4>
+      <button className={styles.likebutton}>{likebutton}</button>
     </div>
   );
 }
