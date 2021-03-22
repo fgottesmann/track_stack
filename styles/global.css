@@ -14,3 +14,11 @@ a {
 * {
   box-sizing: border-box;
 }
+
+:root {
+  --background-color: #2e2d2c;
+  --main-theme-color: #ec9e17;
+  --glow-color: #f8dd5af7;
+  --main-font-color: #d6d6d6;
+  --likebutton-color: #bebebe;
+}
