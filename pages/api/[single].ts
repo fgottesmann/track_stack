@@ -1,10 +1,12 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
-import { withDatabase, trackstack } from "../../server/db";
+import { withDatabase, readSingle } from "../../server/db";
 
 export default withDatabase(
   async (req: NextApiRequest, res: NextApiResponse) => {
-    const list = await trackstack("tracks");
-    res.status(200).json(list);
+    const { single } = req.query;
+
+    const person = await readSingle(single);
+    res.status(200).json(person);
   }
 );
